@@ -1,0 +1,14 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#google-map {
+  height: 352px;
+  width: 562px;
+}

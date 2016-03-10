@@ -1,0 +1,59 @@
+//Font Styles for Museo Slab
+
+// HEADER FONT STYLE IMPORTS
+
+@font-face {
+    font-family: 'museo300';
+    src: url(../fonts/Museo_Slab_300.otf);
+}
+@font-face {
+    font-family: 'museo500';
+    src: url(../fonts/Museo_Slab_500.otf);
+}
+@font-face {
+    font-family: 'museo700';
+    src: url(../fonts/Museo_Slab_700.otf);
+}
+
+$headLight:  "museo300", Arial, sans-serif;
+$headRegular:  "museo500", Arial, sans-serif;
+$headBold:  "museo700", Arial, sans-serif;
+
+//Color variables
+
+$kid-blue: #25aae1;
+$musc-blue: #005288;
+$kid-purple: #92278f;
+$kid-red: #ef4036;
+$kid-green: #74c045;
+$kid-yellow: #f5ee31;
+$bg-gray: #e6e6e6;
+$dark-gray: #585858;
+$text: #333;
+$black: #000;
+$white: #fff;
+
+$border: 4px;
+$acc-border: 1px solid lighten($kid-blue, 40%);
+//mixins
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size:$size;
+  font-size: calculateRem($size);
+}
+
+@mixin transition-three($transition-property, $transition-time, $method) {
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
